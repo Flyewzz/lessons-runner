@@ -16,6 +16,6 @@ class ConnectWebinar(BasicCase):
         name = name.decode('utf-8', errors='ignore')
         self.sign_page.input_name(name)
         self.sign_page.click_join_btn()
-        self.sign_page.click_micro_btn()
+        self.sign_page.click_audio_btn()
         
     
