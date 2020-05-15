@@ -28,7 +28,7 @@ class ConnectWebinar(BasicCase):
         self.sign_page.click_join_btn(self.wait_time)
         self.sign_page.click_audio_btn(self.wait_time)
         time.sleep(self.presence_time)
-        self.driver.close()
+        self.driver.quit()
         
         
     
