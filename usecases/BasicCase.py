@@ -9,10 +9,10 @@ import config
 
 class BasicCase(object):
 
-    def __init__(self):
-        chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_experimental_option('prefs', {'intl.accept_languages': 'ru,ru_RU'})
-        self.driver = webdriver.Chrome(config.DRIVER, chrome_options=chrome_options)
-
-    def add_random_number(self, string):
-        return string + str(random.randrange(1, 1000000))
+    def __init__(self, headless):
+        options = webdriver.ChromeOptions()
+        options.add_experimental_option('prefs', {'intl.accept_languages': 'ru,ru_RU'})
+        if headless:
+            options.add_argument('headless') 
+        
+        self.driver = webdriver.Chrome(config.DRIVER, chrome_options=options)
