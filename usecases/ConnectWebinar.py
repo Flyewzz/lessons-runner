@@ -5,6 +5,8 @@ from pages.SignPage import SignPage
 import time
 import sys
 
+import selenium
+
 reload(sys)
 sys.setdefaultencoding('utf8')
 

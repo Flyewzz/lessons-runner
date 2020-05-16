@@ -20,9 +20,8 @@ class BasicCase(object):
                 options.add_argument("--disable-dev-shm-usage")
                 display = Display(visible=0, size=(800, 600))
                 display.start()
-        
-        self.driver = webdriver.Remote(
-            command_executor='http://docker.for.mac.localhost:4444/wd/hub',
-            desired_capabilities=DesiredCapabilities.CHROME,
-            options=options,
-        )
+                self.driver = webdriver.Remote(
+                    command_executor='http://docker.for.mac.localhost:4444/wd/hub',
+                    desired_capabilities=DesiredCapabilities.CHROME,
+                    options=options,
+                )
