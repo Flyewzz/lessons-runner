@@ -43,23 +43,23 @@
 
   ### Описание опций
    ```
-     -t, --type TEXT          Тип конференции [webinar, freeconferencecall]
+     -t, --type СТРОКА          Тип конференции [webinar, freeconferencecall]
                                  [обязательно]
 
-     -n, --name TEXT          Имя человека, заходящего в конференцию
+     -n, --name СТРОКА          Имя человека, заходящего в конференцию
                                  [обязательно]
 
-     -u, --url TEXT           URL конференции  [обязательно]
+     -u, --url СТРОКА           URL конференции  [обязательно]
      --wait-time ЧИСЛО        Время подключения к конференции в секундах
-                                 seconds (default 60 sec)
+                                 (по умолчанию 60 сек)
 
      --presence-time ЧИСЛО    Время присутствия на лекции
                                  (по умолчанию 1 ч 35 мин)
 
-     -k, --key TEXT           Указать пароль для доступа к комнате webinar.bmstu.ru
-     --executor TEXT          Указать URL адрес сервера Selenium (локальный адрес: http://localhost:4444/wd/hub, на Mac при использовании docker-compose: http://docker.for.mac.localhost:4444/wd/hub)
+     -k, --key СТРОКА           Указать пароль для доступа к комнате webinar.bmstu.ru
+     --executor СТРОКА          Указать URL адрес сервера Selenium (локальный адрес: http://localhost:4444/wd/hub, на Mac при использовании docker-compose: http://docker.for.mac.localhost:4444/wd/hub)
 
-     -vd, --virtual-display   Подключить виртуальный дисплей (потребуется пакет **pyvirtualdisplay**)
+     -vd, --virtual-display   Подключить виртуальный дисплей (потребуется пакет pyvirtualdisplay)
      --no-headless            Будет использован графический интерфейс (откроется настоящий браузер), если флаг активен
      --no-sandbox             Использовать это для запуска из-под пользователя root (например, при использовании Docker контейнера)
 
