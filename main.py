@@ -14,9 +14,10 @@ import click
 @click.option("--presence-time", "presence_time", required=False, type=click.INT, default=4805, help="Time to be presence at the conference in seconds (default 1 h 35 min)")
 @click.option("--key", "-k", "key", required=False, help="If the conference has a key, you may specify it")
 @click.option("--no-headless", "no_headless", is_flag=True, help="With GUI, if this flag is true")
-def process(no_headless, type, name, url, wait_time, presence_time, key):
+@click.option("--no-sandbox", "no_sendbox", is_flag=True, help="Use it, running an app as a root user (for example, in Docker container)")
+def process(no_sendbox, no_headless, type, name, url, wait_time, presence_time, key):
     if type == 'webinar':
-        action = ConnectWebinar(not no_headless, name, url, wait_time, presence_time, key)
+        action = ConnectWebinar(no_sendbox, not no_headless, name, url, wait_time, presence_time, key)
         action.perform()
 
 if __name__ == '__main__':

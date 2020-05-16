@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+    app:
+        build: .
+        depends_on: 
+            - browser
+    browser:
+        image: selenium/standalone-chrome
+        ports: 
+            - "4444:4444"
