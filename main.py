@@ -16,11 +16,11 @@ import click
 @click.option("--executor", "executor", required=False, help="Specify url to Selenium Server (http://localhost:4444/wd/hub, on Mac with docker-compose: http://docker.for.mac.localhost:4444/wd/hub)")
 @click.option("--virtual-display", "-vd", "virtual_display", is_flag=True, help="Connect a virtual display")
 @click.option("--no-headless", "no_headless", is_flag=True, help="With GUI, if this flag is true")
-@click.option("--no-sendbox", "no_sendbox", is_flag=True, help="Use it, running an app as a root user (for example, in Docker container)")
-def process(no_sendbox, no_headless, type, name, url, wait_time, 
+@click.option("--no-sandbox", "no_sandbox", is_flag=True, help="Use it, running an app as a root user (for example, in Docker container)")
+def process(no_sandbox, no_headless, type, name, url, wait_time, 
             presence_time, executor, key, virtual_display):
     if type == 'webinar':
-        action = ConnectWebinar(no_sendbox, not no_headless, name, url, wait_time, 
+        action = ConnectWebinar(no_sandbox, not no_headless, name, url, wait_time, 
                                 presence_time, executor, key, virtual_display)
         action.perform()
 

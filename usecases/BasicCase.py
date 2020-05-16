@@ -10,12 +10,12 @@ import sys
 
 class BasicCase(object):
 
-    def __init__(self, no_sendbox, headless, executor, virtual_display):
+    def __init__(self, no_sandbox, headless, executor, virtual_display):
         options = webdriver.ChromeOptions()
         options.add_experimental_option('prefs', {'intl.accept_languages': 'ru,ru_RU'})
         if headless:
             options.add_argument('headless')
-        if no_sendbox:
+        if no_sandbox:
             options.add_argument("-–no-sandbox")
             options.add_argument("--disable-dev-shm-usage")
         if virtual_display:
