@@ -12,8 +12,10 @@ sys.setdefaultencoding('utf8')
 
 class ConnectWebinar(BasicCase):
         
-    def __init__(self, no_sendbox, headless, name, url, wait_time, presence_time, key):
-        super(ConnectWebinar, self).__init__(no_sendbox, headless)
+    def __init__(self, no_sendbox, headless, name, url, wait_time, 
+                 presence_time, executor, key, virtual_display):
+        super(ConnectWebinar, self).__init__(no_sendbox, headless, 
+                                             executor, virtual_display)
         self.name = name
         self.url = url
         self.wait_time = wait_time
