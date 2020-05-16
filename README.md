@@ -17,6 +17,13 @@
 
   Если отсутствует дисплей, потребуется установить **виртуальный дисплей**:
   ``` pip install pyvirtualdisplay ```
+  
+  * Скачайте [chromedriver](https://chromedriver.storage.googleapis.com/index.html?path=81.0.4044.138/) для своей платформы
+  * Распакуйте скачанный архив (на Windows используйте архиватор) в папку './drivers'
+    - на Linux/macOS:
+      ```
+      sudo apt-get install -y unzip
+      unzip chromedriver_{your_platform}.zip -d ./drivers # Распаковать chromedriver в папку ./drivers
 
 ### Использование
   Формат использования:
