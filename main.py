@@ -13,7 +13,7 @@ import click
 @click.option("--wait-time", "wait_time", required=False, type=click.INT, default=60, help="Time to wait for connection to the conference in seconds (default 60 sec)")
 @click.option("--presence-time", "presence_time", required=False, type=click.INT, default=4805, help="Time to be presence at the conference in seconds (default 1 h 35 min)")
 @click.option("--key", "-k", "key", required=False, help="If the conference has a key, you may specify it")
-@click.option("--executor", "executor", required=False, help="Specify url to Selenium Server (default http://localhost:4444/wd/hub")
+@click.option("--executor", "executor", required=False, help="Specify url to Selenium Server (http://localhost:4444/wd/hub, on Mac with docker-compose: http://docker.for.mac.localhost:4444/wd/hub)")
 @click.option("--virtual-display", "-vd", "virtual_display", is_flag=True, help="Connect a virtual display")
 @click.option("--no-headless", "no_headless", is_flag=True, help="With GUI, if this flag is true")
 @click.option("--no-sendbox", "no_sendbox", is_flag=True, help="Use it, running an app as a root user (for example, in Docker container)")
